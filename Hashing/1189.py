@@ -15,8 +15,8 @@ Example 3:
 Input: text = "leetcode"
 Output: 0
 
-Time Complexity = O()
-Space Complexity = O()
+Time Complexity = O(n)
+Space Complexity = O(n)
 """
 
 def maxNumberOfBalloons(self, text: str) -> int:
