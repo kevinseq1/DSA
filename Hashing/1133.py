@@ -11,6 +11,16 @@ Input: nums = [9,9,8,8]
 Output: -1
 Explanation: There is no number that occurs only once.
 
-Time Complexity = O()
-Space Complexity = O()
+Time Complexity = O(n)
+Space Complexity = O(n)
 """
+
+def largestUniqueNumber(self, nums: List[int]) -> int:
+    frequency = Counter(nums)
+    result = -1
+    
+    for key, value in frequency.items():
+        if value == 1:
+            result = max(result, key)
+
+    return result
