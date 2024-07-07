@@ -19,3 +19,12 @@ Time Complexity = O()
 Space Complexity = O()
 """
 
+def maxNumberOfBalloons(self, text: str) -> int:
+    frequency = Counter(text)
+    balloon = Counter("balloon")
+    result = len(text)
+    
+    for c in balloon:
+        result = min(result, frequency[c] // balloon[c])
+    return result
+
