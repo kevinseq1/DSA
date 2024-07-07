@@ -14,7 +14,7 @@ def find_longest_substring(self, s: str, k: int) -> int:
     left = 0
     ans = 0
     for right in range(len(s)):
-        count[s[right]] += 1
+        counts[s[right]] += 1
         while len(counts) > k:
             counts[s[left]] -= 1
             if counts[s[left]] == 0
